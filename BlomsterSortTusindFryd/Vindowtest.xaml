@@ -1,0 +1,37 @@
+﻿<Window x:Class="BlomsterSortTusindFryd.Vindowtest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlomsterSortTusindFryd"
+        mc:Ignorable="d"
+        Title="Vindowtest" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label Content="Blomster Navn:"/>
+            <TextBox x:Name="blomsterNavntextbox" TabIndex="0" TextChanged="TextBox_TextChanged" Text="" />
+            <Label Content="Produktionstid:"/>
+            <TextBox x:Name="Produktionstidtextbox" TabIndex="2" TextChanged="TextBox_TextChanged_2" />
+            <Label Content="Størrelse:"/>
+            <TextBox x:Name="Størrelsetextbox" TabIndex="5" IsReadOnly="False" IsTabStop="False" Background="White" TextChanged="TextBox_TextChanged_4" />
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Label Content="Billedesti:"/>
+            <TextBox x:Name="billedestitextbox" TabIndex="1" TextChanged="TextBox_TextChanged_1" />
+            <Label Content="Halveringstid:"/>
+            <TextBox x:Name="halveringstidtextbox" TabIndex="4" TextChanged="TextBox_TextChanged_3" />
+            <TextBlock x:Name="confirmationtextbox" TextWrapping="Wrap" Height="48" Width="178"><Run Language="da-dk"/></TextBlock>
+        </StackPanel>
+        <Button x:Name="addButton" Height="20" Margin="80,149,10,0" VerticalAlignment="Top" Click="Button_Click">Add</Button>
+        <Button x:Name="CancelButton" Grid.Column="2" HorizontalAlignment="Left" Width="288" Margin="10,149,0,225" Click="Button_Click_1" RenderTransformOrigin="0.668,0.548">Cancel</Button>
+    </Grid>
+</Window>
